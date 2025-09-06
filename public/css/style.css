@@ -190,6 +190,7 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            margin: 5px;
         }
 
         .disease-card:hover {
@@ -264,7 +265,7 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
+            margin: 2rem;
             display: none;
         }
 

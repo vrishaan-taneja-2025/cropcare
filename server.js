@@ -88,6 +88,34 @@ app.get("/api/health", async (req, res) => {
   }
 });
 
+app.post("/api/diseases", async (req, res) => {
+  try {
+    const { name, crops, symptoms, prevention, treatment, severity, info } = req.body;
+    
+    // Validate required fields
+    if (!name || !crops || !symptoms || !prevention || !treatment || !severity) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+    
+    const newDisease = await prisma.disease.create({
+      data: {
+        name,
+        crops,
+        symptoms,
+        prevention,
+        treatment,
+        severity,
+        info: info || ""
+      }
+    });
+    
+    res.json(newDisease);
+  } catch (err) {
+    console.error("Error adding disease:", err);
+    res.status(500).json({ error: "Failed to add disease" });
+  }
+});
+
 // Catch-all: send index.html for frontend routes
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));

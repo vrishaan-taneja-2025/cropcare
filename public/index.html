@@ -6,6 +6,145 @@
     <title>CropCare - Crop Disease Solutions</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Add Disease Button Styles */
+        .add-disease-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .add-disease-btn:hover {
+            background: #219653;
+        }
+
+        /* Add Disease Form Styles */
+        .add-disease-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            display: none;
+        }
+
+        .add-disease-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .disease-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus, 
+        .form-group select:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-buttons {
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        .cancel-btn {
+            background: #95a5a6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .cancel-btn:hover {
+            background: #7f8c8d;
+        }
+
+        .message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            display: none;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -45,6 +184,65 @@
                 <div class="tag">Rice</div>
                 <div class="tag">Potatoes</div>
             </div>
+        </div>
+    </section>
+
+    <!-- Add Disease Section -->
+    <section class="container">
+        <button class="add-disease-btn" id="showFormBtn">
+            <i class="fas fa-plus"></i> Add New Disease
+        </button>
+
+        <div class="add-disease-section" id="addDiseaseSection">
+            <h2>Add New Disease Information</h2>
+            <form id="diseaseForm" class="disease-form">
+                <div class="form-group">
+                    <label for="name">Disease Name *</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="crops">Affected Crops *</label>
+                    <input type="text" id="crops" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="symptoms">Symptoms *</label>
+                    <textarea id="symptoms" required></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="prevention">Prevention Methods *</label>
+                    <textarea id="prevention" required></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="treatment">Treatment Methods *</label>
+                    <textarea id="treatment" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="severity">Severity *</label>
+                    <select id="severity" required>
+                        <option value="">Select severity</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="info">Additional Information</label>
+                    <textarea id="info"></textarea>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="button" class="cancel-btn" id="cancelFormBtn">Cancel</button>
+                    <button type="submit" class="submit-btn">Add Disease</button>
+                </div>
+            </form>
+            
+            <div id="message" class="message"></div>
         </div>
     </section>
 
@@ -126,8 +324,83 @@
     </footer>
 
     <script>
-        
+        // Add Disease Form Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const showFormBtn = document.getElementById('showFormBtn');
+            const cancelFormBtn = document.getElementById('cancelFormBtn');
+            const addDiseaseSection = document.getElementById('addDiseaseSection');
+            const diseaseForm = document.getElementById('diseaseForm');
+            const messageDiv = document.getElementById('message');
+
+            // Show form
+            showFormBtn.addEventListener('click', function() {
+                addDiseaseSection.style.display = 'block';
+                showFormBtn.style.display = 'none';
+            });
+
+            // Hide form
+            cancelFormBtn.addEventListener('click', function() {
+                addDiseaseSection.style.display = 'none';
+                showFormBtn.style.display = 'flex';
+                diseaseForm.reset();
+                hideMessage();
+            });
+
+            // Form submission
+            diseaseForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('name').value,
+                    crops: document.getElementById('crops').value,
+                    symptoms: document.getElementById('symptoms').value,
+                    prevention: document.getElementById('prevention').value,
+                    treatment: document.getElementById('treatment').value,
+                    severity: document.getElementById('severity').value,
+                    info: document.getElementById('info').value
+                };
+                
+                try {
+                    const response = await fetch('/api/diseases', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (response.ok) {
+                        showMessage('Disease added successfully!', 'success');
+                        diseaseForm.reset();
+                        // Refresh the disease list
+                        loadDiseases();
+                    } else {
+                        showMessage('Error: ' + result.error, 'error');
+                    }
+                } catch (error) {
+                    showMessage('Network error: ' + error.message, 'error');
+                }
+            });
+
+            function showMessage(text, type) {
+                messageDiv.textContent = text;
+                messageDiv.className = `message ${type}`;
+                messageDiv.style.display = 'block';
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    hideMessage();
+                }, 5000);
+            }
+
+            function hideMessage() {
+                messageDiv.style.display = 'none';
+            }
+        });
     </script>
     <script src="js/app.js" defer></script>
+    <script src="js/additup.js" defer></script>
 </body>
 </html>
