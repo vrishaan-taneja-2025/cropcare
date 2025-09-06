@@ -1,0 +1,263 @@
+[
+  {
+    "id": 1,
+    "name": "Tomato Blight",
+    "crops": "Tomatoes, Potatoes",
+    "symptoms": "Brown spots on leaves, white mold under leaves in humid conditions, rapid wilting",
+    "prevention": "Rotate crops, ensure good air circulation, water at base of plants, use resistant varieties",
+    "treatment": "Remove affected plants, apply copper-based fungicides, use baking soda spray",
+    "severity": "high",
+    "info": "Thrives in warm, humid conditions. Can destroy entire crops if not controlled."
+  },
+  {
+    "id": 2,
+    "name": "Powdery Mildew",
+    "crops": "Squash, Cucumbers, Grapes",
+    "symptoms": "White powdery spots on leaves and stems, yellowing leaves, distorted growth",
+    "prevention": "Plant resistant varieties, space plants properly, avoid overhead watering",
+    "treatment": "Apply sulfur or potassium bicarbonate-based fungicides, milk spray solution",
+    "severity": "medium",
+    "info": "Common in warm, dry climates with high humidity levels at night."
+  },
+  {
+    "id": 3,
+    "name": "Root Rot",
+    "crops": "Various crops",
+    "symptoms": "Wilting, yellowing leaves, brown mushy roots, stunted growth",
+    "prevention": "Improve soil drainage, avoid overwatering, rotate crops, use clean equipment",
+    "treatment": "Remove affected plants, apply fungicide to soil, improve drainage",
+    "severity": "high",
+    "info": "Caused by various soil-borne fungi. Often fatal to plants if not addressed early."
+  },
+  {
+    "id": 4,
+    "name": "Leaf Spot",
+    "crops": "Lettuce, Brassicas, Tomatoes",
+    "symptoms": "Circular brown spots with yellow halos on leaves, premature leaf drop",
+    "prevention": "Water in morning, space plants adequately, remove plant debris, rotate crops",
+    "treatment": "Apply copper fungicide, remove severely infected leaves, use baking soda spray",
+    "severity": "medium",
+    "info": "Spread by water splash. Can significantly reduce yield if left untreated."
+  },
+  {
+    "id": 5,
+    "name": "Corn Smut",
+    "crops": "Corn",
+    "symptoms": "Swollen, distorted kernels with black powdery spores, galls on ears",
+    "prevention": "Plant resistant varieties, avoid wounding plants, rotate crops",
+    "treatment": "Remove and destroy infected ears before spores rupture, fungicide application",
+    "severity": "low",
+    "info": "Considered a delicacy in some cultures (huitlacoche)."
+  },
+  {
+    "id": 6,
+    "name": "Rice Blast",
+    "crops": "Rice",
+    "symptoms": "Diamond-shaped lesions on leaves, collar rot, node rot, panicle blight",
+    "prevention": "Use resistant varieties, avoid excess nitrogen, maintain proper water levels",
+    "treatment": "Apply fungicides like tricyclazole, proper field sanitation",
+    "severity": "high",
+    "info": "One of the most destructive diseases of rice worldwide."
+  },
+  
+  {
+    "id": 7,
+    "name": "Late Blight",
+    "crops": "Potatoes, Tomatoes",
+    "symptoms": "Dark green to black water-soaked lesions on leaves, grayish-white mold on undersides, tuber rot",
+    "prevention": "Plant certified seed, rotate crops, avoid overhead irrigation",
+    "treatment": "Apply systemic fungicides like metalaxyl, remove infected plants",
+    "severity": "high",
+    "info": "Famously caused the Irish Potato Famine in the 19th century."
+  },
+  {
+    "id": 8,
+    "name": "Downy Mildew",
+    "crops": "Grapes, Lettuce, Onions",
+    "symptoms": "Yellow patches on leaves, white to grayish mold underside, leaf curling",
+    "prevention": "Plant resistant varieties, maintain air flow, avoid excess moisture",
+    "treatment": "Use copper fungicide sprays, practice crop rotation",
+    "severity": "medium",
+    "info": "Different from powdery mildew, thrives in cool and wet conditions."
+  },
+  {
+    "id": 9,
+    "name": "Anthracnose",
+    "crops": "Beans, Cucumbers, Mangoes",
+    "symptoms": "Sunken dark lesions on stems, pods, fruits, black spots on leaves",
+    "prevention": "Use disease-free seeds, rotate crops, avoid wet foliage",
+    "treatment": "Apply chlorothalonil fungicide, remove diseased plant parts",
+    "severity": "medium",
+    "info": "Highly destructive to tropical fruits like mangoes."
+  },
+  {
+    "id": 10,
+    "name": "Bacterial Wilt",
+    "crops": "Cucumbers, Tomatoes, Potatoes",
+    "symptoms": "Sudden wilting of leaves despite moist soil, brown vascular tissues",
+    "prevention": "Use resistant varieties, control insect vectors, sanitize tools",
+    "treatment": "No effective cure, rogue out infected plants, crop rotation",
+    "severity": "high",
+    "info": "Caused by Ralstonia solanacearum bacteria, spreads rapidly."
+  },
+  {
+    "id": 11,
+    "name": "Black Sigatoka",
+    "crops": "Bananas, Plantains",
+    "symptoms": "Streaks on leaves turning dark brown, reduced photosynthesis, premature fruit ripening",
+    "prevention": "Ensure good drainage, remove infected leaves, plant resistant cultivars",
+    "treatment": "Apply systemic fungicides like triazoles, maintain field hygiene",
+    "severity": "high",
+    "info": "Major global threat to banana production."
+  },
+  {
+    "id": 12,
+    "name": "Clubroot",
+    "crops": "Cabbage, Broccoli, Cauliflower",
+    "symptoms": "Swollen, distorted roots, wilting, yellow leaves",
+    "prevention": "Maintain soil pH above 7.2, rotate crops for 7 years, use lime",
+    "treatment": "No direct cure, soil amendments and resistant cultivars help",
+    "severity": "high",
+    "info": "Caused by Plasmodiophora brassicae, persists in soil for years."
+  },
+  {
+    "id": 13,
+    "name": "Goss's Wilt",
+    "crops": "Corn",
+    "symptoms": "Water-soaked lesions with shiny freckles, leaf blight, stalk rot",
+    "prevention": "Rotate crops, bury plant residue, plant resistant hybrids",
+    "treatment": "No chemical cure, manage with cultural practices",
+    "severity": "medium",
+    "info": "Caused by Clavibacter michiganensis subspecies, spreads via residue."
+  },
+  {
+    "id": 14,
+    "name": "Ergot",
+    "crops": "Rye, Wheat, Barley",
+    "symptoms": "Purple-black fungal sclerotia replacing grain kernels",
+    "prevention": "Use clean seed, deep plow, rotate crops",
+    "treatment": "Fungicides at flowering stage, crop sanitation",
+    "severity": "high",
+    "info": "Produces toxic alkaloids that can cause ergotism in humans and animals."
+  },
+  {
+    "id": 15,
+    "name": "Panama Disease",
+    "crops": "Bananas",
+    "symptoms": "Yellowing of lower leaves, wilting, vascular discoloration",
+    "prevention": "Use resistant varieties, improve drainage, avoid infected soil",
+    "treatment": "No cure, remove infected plants, soil sterilization",
+    "severity": "high",
+    "info": "A major fungal disease threatening Cavendish bananas worldwide."
+  },
+  {
+    "id": 16,
+    "name": "Fire Blight",
+    "crops": "Apples, Pears",
+    "symptoms": "Shoots wilt, turn brown or black, appear scorched, oozing bacterial exudate",
+    "prevention": "Prune infected branches, disinfect tools, avoid high nitrogen fertilizers",
+    "treatment": "Apply streptomycin sprays, copper fungicides",
+    "severity": "high",
+    "info": "Caused by Erwinia amylovora bacteria, spreads quickly in orchards."
+  },
+  {
+    "id": 17,
+    "name": "Gray Mold (Botrytis)",
+    "crops": "Strawberries, Grapes, Tomatoes",
+    "symptoms": "Gray fuzzy mold on fruit and leaves, fruit rot, flower blight",
+    "prevention": "Avoid overhead watering, improve air circulation, remove infected fruits",
+    "treatment": "Fungicides like iprodione, sulfur sprays",
+    "severity": "medium",
+    "info": "Thrives in cool, damp weather; very common post-harvest."
+  },
+  {
+    "id": 18,
+    "name": "Citrus Canker",
+    "crops": "Oranges, Lemons, Limes",
+    "symptoms": "Raised corky lesions on leaves, stems, and fruits, premature fruit drop",
+    "prevention": "Plant resistant varieties, quarantine infected orchards",
+    "treatment": "Copper-based sprays, remove infected trees",
+    "severity": "high",
+    "info": "Bacterial disease that can devastate citrus production."
+  },
+  {
+    "id": 19,
+    "name": "Rust",
+    "crops": "Wheat, Beans, Coffee",
+    "symptoms": "Orange, brown, or yellow pustules on leaves, reduced vigor",
+    "prevention": "Plant resistant varieties, destroy alternate host plants",
+    "treatment": "Fungicide sprays like triazoles, sulfur-based fungicides",
+    "severity": "high",
+    "info": "Includes wheat stem rust and coffee rust, historically destructive."
+  },
+  {
+    "id": 20,
+    "name": "Wilt (Fusarium)",
+    "crops": "Tomatoes, Bananas, Cotton",
+    "symptoms": "Yellowing, wilting, vascular streaks in stems, plant collapse",
+    "prevention": "Use resistant cultivars, solarize soil, crop rotation",
+    "treatment": "Soil fumigation, fungicides offer limited control",
+    "severity": "high",
+    "info": "Soil-borne fungus that can survive for years without a host."
+  },
+  {
+    "id": 21,
+    "name": "Alternaria Leaf Spot",
+    "crops": "Carrots, Brassicas, Tomatoes",
+    "symptoms": "Dark concentric rings on leaves, yellow halos, premature defoliation",
+    "prevention": "Crop rotation, remove plant debris, avoid wet foliage",
+    "treatment": "Apply mancozeb or chlorothalonil fungicides",
+    "severity": "medium",
+    "info": "Can significantly reduce yield in carrots and cabbages."
+  },
+  {
+    "id": 22,
+    "name": "Sclerotinia Stem Rot (White Mold)",
+    "crops": "Soybeans, Sunflowers, Canola",
+    "symptoms": "White fluffy growth on stems, black sclerotia inside tissues, wilting",
+    "prevention": "Improve air flow, rotate crops, avoid excessive irrigation",
+    "treatment": "Apply boscalid fungicide, use resistant varieties",
+    "severity": "high",
+    "info": "Affects over 400 plant species, very destructive in beans and oil crops."
+  },
+  {
+    "id": 23,
+    "name": "Mosaic Virus",
+    "crops": "Cucumbers, Tobacco, Peppers",
+    "symptoms": "Mottled light and dark green patterns on leaves, stunted growth",
+    "prevention": "Use virus-free seeds, control insect vectors, resistant varieties",
+    "treatment": "No cure, rogue infected plants, control aphids",
+    "severity": "medium",
+    "info": "Includes famous Tobacco Mosaic Virus (TMV), one of the first viruses discovered."
+  },
+  {
+    "id": 24,
+    "name": "Angular Leaf Spot",
+    "crops": "Beans, Cucumbers, Pumpkins",
+    "symptoms": "Angular water-soaked lesions on leaves, turning brown and papery",
+    "prevention": "Avoid overhead irrigation, rotate crops, resistant cultivars",
+    "treatment": "Apply copper sprays, remove infected debris",
+    "severity": "medium",
+    "info": "Bacterial disease that thrives in wet and warm weather."
+  },
+  {
+    "id": 25,
+    "name": "Phytophthora Blight",
+    "crops": "Peppers, Cucurbits, Eggplants",
+    "symptoms": "Dark water-soaked stem lesions, fruit rot, leaf wilt",
+    "prevention": "Improve drainage, rotate crops, resistant hybrids",
+    "treatment": "Fungicides like mefenoxam, destroy infected plants",
+    "severity": "high",
+    "info": "Caused by Phytophthora capsici, survives long in soil."
+  },
+  {
+    "id": 26,
+    "name": "Crown Gall",
+    "crops": "Grapes, Roses, Stone Fruits",
+    "symptoms": "Large rough galls at crown or roots, stunted growth, reduced yield",
+    "prevention": "Avoid mechanical injury, use disease-free stock",
+    "treatment": "No chemical cure, remove infected plants, biological control with Agrobacterium radiobacter",
+    "severity": "medium",
+    "info": "Caused by Agrobacterium tumefaciens, also used in genetic engineering."
+  }
+]
